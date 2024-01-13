@@ -8,7 +8,7 @@ const flash = require("connect-flash");
 const session = require("express-session");
 const Admin = require("./models/admin.model");
 
-mongoose.connect("mongodb://127.0.0.1:27017/geegstack_store")
+mongoose.connect("mongodb+srv://consumer:consumer09@cluster0.ingz2z4.mongodb.net/?retryWrites=true&w=majority")
 .then(function(){
     console.log("database connected sucessfully!");
 })
