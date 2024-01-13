@@ -1,0 +1,44 @@
+<%- include ("./layouts/header.ejs") %>
+
+<main class="product-details">
+    <h2>Admin Signup</h2>
+    <p class="error"><%= errorMsg %></p>
+    <div class="form-container">
+        <form action="/admin/register" method="post">
+            <div>
+                <label for="name">
+                    <p>First Name</p>
+                </label>
+                <input type="text" name="fname" value="<%= form[0]?.fname %>">
+            </div>
+            <div>
+                <label for="price">
+                    <p>Last Name</p>
+                </label>
+                <input type="text" name="lname"  value="<%= form[0]?.lname %>">
+            </div>
+            <div>
+                <label for="description">
+                    <p>Email Address</p>
+                </label>
+                <input type="email" name="email" value="<%= form[0]?.email %>">
+            </div>
+            <div>
+                <label>
+                    <p>Password</p>
+                </label>
+                <input type="password" name="password"  id="">
+            </div>
+            <div>
+                <label>
+                    <p>Confirm Password</p>
+                </label>
+                <input type="password" name="cpassword"  id="">
+               
+            </div>
+            <input type="submit" value="Create Account">
+        </form>
+    </div>
+</main>
+
+<%- include ("./layouts/footer.ejs") %>

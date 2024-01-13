@@ -1,0 +1,27 @@
+<%- include ("./layouts/header.ejs") %>
+
+<main class="product-details">
+    <h2>Admin login</h2>
+    <p class="error"><%= errorMsg %></p>
+    <div class="form-container">
+        <form action="/admin/login" method="post">
+           
+            <div>
+                <label>
+                    <p>Email Address</p>
+                </label>
+                <input type="email" name="email" value="<%= form[0]?.email %>">
+            </div>
+            <div>
+                <label>
+                    <p>Password</p>
+                </label>
+                <input type="password" name="password"  id="">
+            </div>
+            
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</main>
+
+<%- include ("./layouts/footer.ejs") %>
